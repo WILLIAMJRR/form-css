@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=IBM+Plex+Sans:wght@400;500&display=swap');
+
+:root {
+    --font-plain: 'IBM Plex Sans', sans-serif;
+    --font-special: 'Fredoka One', sans-serif;
+    --font-family: 'Fredoka One', cursive;
+    --font-family-2: 'IBM Plex Sans', sans-serif;
+
+    box-sizing: border-box;
+}
+
+.app {
+    font-family: var(--font-family-2);
+    color: rgb(58, 55, 55);
+    gap: 2rem;
+    position: relative;
+    margin: 0 auto;
+}
+.app_header {
+    width: 100%;
+    height: 60px;
+    color: #ffffff;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.app_title {
+    margin: 0 auto;
+    font-family: var();
+    font-size: 1.5rem;
+    font-weight: bold;
+
+}
+
+.app_btn_form {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 3rem auto 0 auto;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #0a82f3;
+}
+
+.app_form {
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font-special);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    transform: scale(0);
+    transition: transform 200ms;
+    position: fixed;
+    border-radius: 5px;
+    top: 0;
+}
+.form_x {
+    position: absolute;
+    color: red;
+    cursor: pointer;
+    top: 1.5em;
+    right: 1rem;
+    font-size: 0.8rem;
+    transition: transform 200ms;
+}
+
+.form_x:hover {
+    transform: scale(1.1);
+}
+
+.app_form_visible {
+    transform: scale(1);
+}
+.form {
+    color: rgb(58, 55, 55);
+    font-size: 16px;
+    transform: translate(-0, -0);
+    padding: 1.5rem;
+    background-color: rgba(14, 4, 4, 0.597);
+    border-radius: 0.5rem;
+    color: aliceblue;
+    width: 360px;
+    position: sticky;
+    z-index: 30;
+}
+
+.form::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -3px;
+    left: -10px;
+    border-left: 2px solid cyan;
+    border-top: 2px solid rgb(251, 255, 0);
+    transition: 1s;
+}
+.form::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: -3px;
+    right: -10px;
+    border-right: 2px solid rgb(137, 20, 255);
+    border-top: 2px solid rgb(0, 255, 200);
+    transition: 1s;
+}
+.form span::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: -3px;
+    right: -10px;
+    border-right: 2px solid cyan;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    transition: 1s;
+}
+
+.form span::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    bottom: -3px;
+    left: -10px;
+    border-left: 2px solid deeppink;
+    border-bottom: 2px solid rgb(20, 255, 39);
+    transition: 1s;
+}
+.form:hover::after,
+.form:hover::before,
+.form:hover span::after,
+.form:hover span::before {
+    width: calc(50% + 8px);
+    height: calc(50% + 1px);
+    z-index: -1;
+}
+
+.form_title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.form_item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.2rem;
+}
+.form_label {
+    color: rgb(255, 255, 255);
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.form_input {
+    font-family: var(--font-special);
+    margin-bottom: 0.5rem;
+    cursor: help;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    transition: transform 300ms;
+    background-color: #ffffff;
+  
+}
+
+.form_input:hover {
+    transform: scale(1.02);
+}
+
+.form_btn {
+    margin-top: 2rem;
+    border: none;
+    background-color: rgb(38, 195, 252);
+    width: 315px;
+
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+.form_btn:hover {
+    transform: scale(1.03);
+}
+
+.btn_delete {
+    background-color: rgb(237, 16, 16);
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 300ms;
+    border-radius:  5px 0 0 5px ;
+}
+
+.btn_delete:hover {
+    transform: scale(1.03);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.btn_update {
+    background-color: #0ab9f3;
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 40px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+.btn_update:hover {
+    transform: scale(1.03);
+    transform: scale(1.03);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.btn_info {
+    display: flex;
+}
+.form_input_date{
+    font-family: var(--font-special);
+    margin-bottom: 0.5rem;
+    cursor: help;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    transition: transform 300ms;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.59);
+}
+    

@@ -1,0 +1,37 @@
+.user_container{
+    padding: 2rem;
+    max-width:1000px;
+     margin: 2rem auto 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+ 
+}
+
+
+.user_card{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+    border-radius: 5px;
+    color: black;
+    box-shadow: 0px 0px 10px rgb(13, 0, 0);
+    padding: 1rem;
+}
+
+.user_title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.user_list{
+   line-height: 2rem;
+}
+
+.user_card_item{
+
+    list-style: none;
+}
